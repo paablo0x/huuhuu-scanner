@@ -1,90 +1,38 @@
+# Huuhuu Scanner
 
-# huuhuu-scanner
-802.11 WiFi reconnaissance tool using Scapy for real-time packet analysis and network discovery
-=======
+A lightweight 802.11 WiFi reconnaissance tool built with Python and Scapy.
 
-A lightweight WiFi reconnaissance tool built in Python using Scapy.
+Huuhuu Scanner captures wireless beacon frames in monitor mode and displays information about nearby wireless networks in a live terminal interface.
 
 ## Features
 
-- Real-time WiFi scanning (802.11)
-- Signal strength analysis (RSSI)
-- Security detection (Open, WPA, WPA2, WPA3)
-- Live statistics (networks, clients, strongest AP)
-- Interactive controls (pause/resume)
-- CLI support (--open, --weak, --target)
-- Automatic monitor mode handling
-- Safe cleanup and WiFi restoration
-- Dynamic terminal UI (animated owl 🦉)
+- Real-time 802.11 WiFi scanning
+- SSID and BSSID discovery
+- RSSI / signal-strength analysis
+- Basic wireless security classification
+- Channel detection
+- 2.4 GHz / 5 GHz band identification
+- Passive client observation
+- Channel hopping
+- Interactive terminal interface
+- Filtering by security type
+- BSSID targeting
+- Monitor-mode setup and cleanup
 
-## Screenshots
+## Requirements
 
-### [Menu](https://github.com/user-attachments/assets/a7aa85ba-54f9-482b-aebe-430b0f00f77e)
+- Linux
+- Python 3
+- Scapy
+- Wireless adapter supporting monitor mode
+- airmon-ng
+- iwconfig
 
-### [Scanning networks](https://github.com/user-attachments/assets/528cefb0-cfe6-4c10-ab11-a75999b26ca5)
+Kali Linux is recommended for the lab environment.
 
 ## Installation
 
 ```bash
-git clone https://github.com/paablorsc/huuhuu-scanner.git
+git clone https://github.com/paablo0x/huuhuu-scanner.git
 cd huuhuu-scanner
 pip install -r requirements.txt
-
-
-## Requirements
-
-- Linux (Kali recommended)  
-- Python 3  
-- Scapy  
-- Wireless adapter supporting monitor mode  
-
-## Usage
-
-```bash
-sudo huuhuu-scanner -i wlan0
-
-## Example Output
-
-SSID BSSID CH BAND RSSI SIG SEC CLIENTS
-MyWiFi AA:BB:CC:DD:EE:FF 6 2.4G -45 Strong Secure 3
-Guest 11:22:33:44:55:66 1 2.4G -70 Weak Open 1
-
-## How it Works
-
-The scanner uses Scapy to capture 802.11 beacon frames while the wireless interface is in monitor mode.
-
-- Extracts SSID, BSSID, channel, and encryption information  
-- Measures signal strength (RSSI) from captured packets  
-- Classifies networks based on security type  
-- Performs channel hopping to discover networks across frequencies  
-- Passively detects client devices from observed traffic  
-
-## Controls
-
-- CTRL+A → Return to main menu
-- CTRL+1 → Make the networks on the screen stationary
-- CTRL+C → Exit and restore WiFi  
-
-## Limitations
-
-- Requires a wireless adapter that supports monitor mode  
-- Signal strength values depend on hardware and environment  
-- Client detection is passive and may not capture all devices  
-- Only tested on Linux-based systems  
-
-## Disclaimer
-
-This tool is intended for educational and research purposes only.
-
-It is designed to be used in controlled environments such as:
-- personal labs  
-- authorized penetration testing environments  
-- networks you own or have explicit permission to test  
-
-Unauthorized use of this tool against networks without permission may be illegal.
-
-The author is not responsible for any misuse.
-
-## Author
-
-Created by Pablo
