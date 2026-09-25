@@ -25,8 +25,8 @@ Huuhuu Scanner captures wireless beacon frames in monitor mode and displays info
 - Python 3
 - Scapy
 - Wireless adapter supporting monitor mode
-- airmon-ng
-- iwconfig
+- `airmon-ng`
+- `iwconfig`
 
 Kali Linux is recommended for the lab environment.
 
