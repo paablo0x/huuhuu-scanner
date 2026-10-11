@@ -1,11 +1,24 @@
 # Huuhuu Scanner
 
+<<<<<<< HEAD
 A lightweight 802.11 WiFi reconnaissance tool built with Python and Scapy.
 
 Huuhuu Scanner captures wireless beacon frames in monitor mode and displays information about nearby wireless networks in a live terminal interface.
+=======
+## Understanding Wi-Fi Signal Strength (RSSI)
 
-## Features
+RSSI (Received Signal Strength Indicator) estimates the strength of a received Wi-Fi signal. It is commonly expressed in dBm, where values closer to zero generally indicate a stronger signal.
+>>>>>>> 313d475 (docs: explain Wi-Fi RSSI signal strength)
 
+| RSSI (dBm) | General interpretation |
+|------------|-------------------------|
+| -30 to -50 | Very strong |
+| -51 to -60 | Strong |
+| -61 to -70 | Moderate |
+| -71 to -80 | Weak |
+| Below -80 | Very weak |
+
+<<<<<<< HEAD
 - Real-time 802.11 WiFi scanning
 - SSID and BSSID discovery
 - RSSI / signal-strength analysis
@@ -78,3 +91,11 @@ Author
 Pablo
 
 GitHub: https://github.com/paablo0x
+=======
+These ranges are approximate. Actual signal quality depends on interference, obstacles, antenna characteristics, and the receiving device.
+
+### Why RSSI Matters
+
+RSSI helps compare nearby access points and understand Wi-Fi coverage. A stronger signal does not necessarily mean a faster connection, and RSSI alone cannot determine whether a network is secure.
+
+>>>>>>> 313d475 (docs: explain Wi-Fi RSSI signal strength)
